@@ -45,7 +45,6 @@ Plug 'morhetz/gruvbox'
 "Plug 'alvan/vim-closetag'
 Plug 'jremmen/vim-ripgrep'
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'kien/ctrlp.vim'
 "Plug 'Valloric/YouCompleteMe', {'do': './install.py --tern-completer'}
@@ -63,10 +62,17 @@ Plug 'kassio/neoterm'
 Plug 'tpope/vim-commentary'
 Plug 'sbdchd/neoformat'
 
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 let NERDTreeShowBookmarks=1
-"let NERDTreeMapOpenInTab='<ENTER>'
+" let NERDTreeMapOpenInTab='<ENTER>'
 
 
 " itchyny/lightline.vim and itchyny/vim-gitbranch
@@ -95,6 +101,21 @@ tnoremap <c-y> <c-\><c-n>:Ttoggle<CR>
 
 " sbdchd/neoformat
 nnoremap <leader>F :Neoformat prettier<CR>
+
+" nvim-telescope/telescope.nvim
+nnoremap <leader><space> :Telescope git_files<CR>
+nnoremap <leader>FF :Telescope find_files<CR>
+nnoremap <leader>fg :Telescope git_branches<CR>
+nnoremap <leader>fb :Telescope buffers<CR>
+nnoremap <leader>fs :Telescope lsp_document_symbols<CR>
+nnoremap <leader>ff :Telescope live_grep<CR>
+
+
+" tpope/vim-fugitive
+nnoremap <leader>gg :G<cr>
+nnoremap <leader>gd :Gdiff master<cr>
+nnoremap <leader>gl :G log -100<cr>
+nnoremap <leader>gp :G push<cr>
 
 " CoC extensions
 let g:coc_global_extensions = [
