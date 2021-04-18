@@ -1,5 +1,4 @@
 tap "dopplerhq/cli"
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -22,8 +21,7 @@ brew "rustup-init"
 brew "tcl-tk"
 brew "tmux"
 brew "yarn"
-brew "dopplerhq/cli/doppler"
-brew "heroku/brew/heroku", link: false
+brew "dopplerhq/cli/doppler", link: false
 cask "bitwarden"
 cask "docker"
 cask "github"
