@@ -69,8 +69,11 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+Plug 'vim-python/python-syntax'
+
 call plug#end()
 
+" let g:python_highlight_all = 1
 let NERDTreeShowBookmarks=1
 " let NERDTreeMapOpenInTab='<ENTER>'
 
