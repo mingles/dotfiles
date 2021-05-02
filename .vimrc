@@ -41,6 +41,8 @@ nnoremap <leader>v :e ~/.vimrc<CR>
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dense-analysis/ale'
+
 Plug 'morhetz/gruvbox'
 "Plug 'alvan/vim-closetag'
 Plug 'jremmen/vim-ripgrep'
@@ -73,8 +75,19 @@ Plug 'vim-python/python-syntax'
 
 call plug#end()
 
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort'],
+\}
+
+let g:ale_disable_lsp = 1
+let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 1
+
 " let g:python_highlight_all = 1
 let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='<ENTER>'
 
 
@@ -127,8 +140,12 @@ let g:coc_global_extensions = [
 \ 'coc-tsserver',
 \ 'coc-html',
 \ 'coc-css',
+\ 'coc-pyright',
 \ 'coc-yaml'
 \ ]
+
+" Set workspace folder too root
+autocmd FileType python let b:coc_root_patterns = ['.git']
 
 " Use <Tab> and <S-Tab> to navigate the completion list:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
