@@ -23,6 +23,7 @@ brew "tmux"
 brew "yarn"
 brew "dopplerhq/cli/doppler", link: false
 cask "bitwarden"
+cask "blender"
 cask "docker"
 cask "github"
 cask "google-chrome"
