@@ -71,7 +71,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'vim-python/python-syntax'
+"Plug 'vim-python/python-syntax'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -215,6 +216,9 @@ noremap <leader>u :UndotreeShow<CR>
 noremap <leader>x :bp<cr>:bd #<cr>
 noremap <silent><leader>pv :NERDTreeFind<CR>
 noremap <silent> pt :NERDTreeToggle<Enter>
+
+" yank to system clipboar
+vnoremap <C-c> "*y
 
 " clear highlighting after search
 nnoremap <C-l> :nohl<CR><C-L>
