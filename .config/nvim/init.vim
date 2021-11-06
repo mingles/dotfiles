@@ -71,15 +71,16 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-"Plug 'vim-python/python-syntax'
+Plug 'vim-python/python-syntax'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters = {'python': ['flake8'] }
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['isort']
+\   'python': ['isort', 'yapf'],
+\   'typescript': ['prettier', 'eslint']
 \}
 
 let g:ale_disable_lsp = 1
