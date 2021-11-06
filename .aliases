@@ -1,3 +1,4 @@
 alias vim=nvim
 alias mingles='cd ~/Github/mingles'
+alias activate='source venv/bin/activate'
 alias dotfiles='/usr/bin/git --git-dir=/Users/mingles/.dotfiles/ --work-tree=/Users/mingles'
