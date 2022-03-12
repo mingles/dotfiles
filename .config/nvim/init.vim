@@ -50,12 +50,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 
 Plug 'morhetz/gruvbox'
-"Plug 'alvan/vim-closetag'
-Plug 'jremmen/vim-ripgrep'
+Plug 'miyase256/vim-ripgrep', {'branch': 'fix/remove-complete-from-RgRoot'}
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
 Plug 'kien/ctrlp.vim'
-"Plug 'Valloric/YouCompleteMe', {'do': './install.py --tern-completer'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
